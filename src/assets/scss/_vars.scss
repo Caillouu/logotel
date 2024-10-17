@@ -1,0 +1,18 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --pink: #F07C79;
+  --pink-text: #ED6562;
+  --turquoise: #44E0DC;
+  --yellow: #FFED65;
+  --grey: #272727;
+  --lightgrey: #838080;
+  
+  --base-font-family: 'Roboto';
+  --second-font-family: 'Roboto Mono';
+  --base-font-size: 16px;
+}
+
+.color-pink {
+  color: var(--pink);
+}
