@@ -1,0 +1,286 @@
+.section-timeline {
+  position: relative;
+  padding: 300px 0;
+  background: linear-gradient(0deg, rgba(70,70,70,1) 50%, rgba(39,39,39,1) 100%);
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../img/onda-grigio-bianco.png') no-repeat left bottom;
+    background-size: 100% auto;
+    z-index: -1;
+  }
+}
+
+.bk-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 364px;
+  z-index: 1;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 78px;
+    left: 358px;
+    height: 10px;
+    width: calc(100% - 355px);
+    background-color: var(--white);
+    z-index: -1;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 78px;
+    right: -86px;
+    width: 76px;
+    height: 152.5px;
+    border-radius: 0 76px 76px 0;
+    border: 10px solid var(--white);
+    border-left: 0;
+    z-index: -1;
+  }
+
+  &:first-child {
+    &:before {
+      left: 320px;
+      width: calc(100% - 320px);
+    }
+  }
+
+  &:nth-child(even) {
+    align-items: flex-end;
+    margin-right: 0;
+    margin-left: 364px;
+
+    &:before {
+      left: auto;
+      right: 360px;
+      width: calc(100% - 355px);
+    }
+
+    &:after {
+      right: auto;
+      left: -91px;
+      border-radius: 76px 0 0 76px;
+      border: 10px solid var(--white);
+      border-right: 0;
+    }
+
+    .bk-timeline {
+      &__header {
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+      }
+
+      &__title {
+        padding-right: 0;
+        padding-left: 24px;
+        text-align: left;
+      }
+      
+      &__content {
+        margin-left: 0;
+        margin-right: 364px;
+
+        &:after {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 78px;
+          left: -91px;
+          width: 76px;
+          height: calc(100% - 10px);
+          border-radius: 76px 0 0 76px;
+          border: 10px solid var(--white);
+          border-right: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n+2) {
+    .bk-timeline {
+      &__title,
+      &__content h3 {
+        color: var(--yellow);
+      }
+
+      &__icon {
+        background-color: var(--yellow);
+        
+        &:after {
+          background-color: var(--yellow);
+        }
+      }
+    }
+  }
+
+  &:nth-child(3n+3) {
+    .bk-timeline {
+      &__title,
+      &__content h3 {
+        color: var(--pink);
+      }
+
+      &__icon {
+        background-color: var(--pink);
+        
+        &:after {
+          background-color: var(--pink);
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    &:before {
+      width: calc(50% - 160px);
+    }
+
+    &:after {
+      top: 64px;
+      left: calc(50% - 210px);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: #D8D8D8;
+      border: none;
+    }
+  }
+
+  &:nth-last-child(1):nth-child(odd) {
+    &:after {
+      left: auto;
+      right: calc(50% - 190px);
+    }
+  }
+  &--open {
+    &:after {
+      display: none;
+    }
+
+    &:last-child {
+      &:before {
+        width: calc(100% - 350px);
+      }
+
+      .bk-timeline__content {
+        &:before {
+          content: '';
+          position: absolute;
+          top: calc(100% + 64px);
+          left: -10px;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          background-color: #D8D8D8;
+          border: none;
+        }
+      }
+    }
+
+    .bk-timeline__icon {
+      &:after {
+        opacity: .5;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 364px;
+    width: 100%;
+  }
+
+  &__title {
+    padding-right: 10px;
+    text-align: right;
+    font-family: var(--second-font-family);
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25em;
+    color: var(--turquoise);
+
+    span {
+      display: block;
+      font-size: 80px;
+      line-height: 1.5em;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    background-color: var(--turquoise);
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    border: none;
+    cursor: pointer;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      top: -24px;
+      left: -24px;
+      right: -24px;
+      bottom: -24px;
+      border-radius: 50%;
+      background-color: var(--turquoise);
+      opacity: 0;
+      transition: ease .3s;
+      z-index: -1;
+    }
+    
+    img {
+      position: absolute;
+      display: block;
+      width: 45%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__content {
+    display: none;
+    margin-left: 364px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 78px;
+      right: -86px;
+      width: 76px;
+      height: calc(100% - 10px);
+      border-radius: 0 76px 76px 0;
+      border: 10px solid var(--white);
+      border-left: 0;
+      z-index: -1;
+    }
+
+    h3 {
+      color: var(--turquoise);
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: var(--white);
+    }
+  }
+}
