@@ -11,10 +11,11 @@ import './src/assets/scss/components/_bk-news.scss'
 import './src/assets/scss/components/_bk-card.scss'
 import './src/assets/scss/components/_bk-timeline.scss'
 
-import $ from 'jquery';
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
+import $ from 'jquery'
+import Headroom from "headroom.js";
+import Swiper from 'swiper'
+import { Navigation, Pagination } from 'swiper/modules'
+import 'swiper/css'
 
 window.$ = $;
 
@@ -84,4 +85,32 @@ $('.bk-news').on('mouseenter', function() {
     const $paragraph = $(this).find('.bk-news__content p')
     const text = $paragraph.text()
     $paragraph.text(text.trim().substring(0, 110) + "...")
-  })
+})
+
+var myElement = document.querySelector("header");
+var headroom  = new Headroom(myElement);
+headroom.init();
+
+$('header nav ul a').on('click', function(e) {
+  e.preventDefault()
+  var id = $(this).attr('href')
+  $('html, body').animate({
+    scrollTop: $(id).offset().top + 10
+  }, 600);
+});
+
+function onScroll(event) {
+  var scrollPosition = $(document).scrollTop();
+  $('header nav ul a').each(function() {
+    var currentLink = $(this);
+    var refElement = $(currentLink.attr("href"));
+    if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.outerHeight() > scrollPosition) {
+      $('header nav ul liv a.active').removeClass('active');
+      $(this).addClass('active');
+    } else {
+      currentLink.removeClass("active");
+    }
+  });
+}
+
+$(document).on("scroll", onScroll);

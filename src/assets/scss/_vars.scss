@@ -11,8 +11,18 @@
   --base-font-family: 'Roboto';
   --second-font-family: 'Roboto Mono';
   --base-font-size: 16px;
+
+  --tablet:  768px;
+
 }
 
 .color-pink {
   color: var(--pink);
 }
+
+$large: 1599px;
+$medium: 1279px;
+$standard: 1023px;
+$tablet: 767px;
+$phablet: 599px;
+$mobile: 479px;
