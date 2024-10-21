@@ -22,7 +22,7 @@ window.$ = $;
 const swiper = new Swiper(".swiper-home", {
   loop: true,
   autoplay: {
-    delay: 2500,
+    delay: 500,
     disableOnInteraction: false,
   },
   modules: [Navigation, Pagination],
@@ -55,7 +55,6 @@ $('.bk-card').on('mouseenter', function(e) {
 }).on('mouseleave', function(e) {
   $(this).find('.btn').css('color', '#fff')
 })
-
 
 $('.bk-timeline__icon').on('click', function() {
   const parent = $(this).closest('.bk-timeline')

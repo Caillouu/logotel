@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   transition: ease .3s;
-  z-index: 2;
+  z-index: 99;
   
   @media (min-width: 1024px) {
     padding: 30px 60px;

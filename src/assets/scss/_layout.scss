@@ -26,3 +26,35 @@ button {
     border: none;
   }
 }
+
+.bk-title-bg {
+  position: relative;
+  margin-top: -150px;
+  
+  &.bk-title-bg--tar {
+    .container {
+      display: flex;
+      justify-content: flex-end;
+      top: 260px;
+
+      h2 {
+        text-align: right;
+      }
+    }
+  }
+  
+  img {
+    display: block;
+  }
+  
+  .container {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    h2 {
+      max-width: 800px;
+    }
+  }
+}

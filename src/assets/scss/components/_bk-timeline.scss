@@ -1,20 +1,10 @@
 .section-timeline {
   position: relative;
-  padding: 300px 0;
-  background: linear-gradient(0deg, rgba(70,70,70,1) 50%, rgba(39,39,39,1) 100%);
-  z-index: 1;
 
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../img/onda-grigio-bianco.png') no-repeat left bottom;
-    background-size: 100% auto;
-    z-index: -1;
+  &__bg {
+    margin-top: -3px;
+    padding-top: 30px;
+    background: linear-gradient(0deg, rgba(70,70,70,1) 50%, rgba(39,39,39,1) 100%);
   }
 }
 
@@ -22,34 +12,40 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-right: 364px;
+  margin-bottom: 10px;
   z-index: 1;
   
-  &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 78px;
-    left: 358px;
-    height: 10px;
-    width: calc(100% - 355px);
-    background-color: var(--white);
-    z-index: -1;
+  @media (min-width: 1024px) {
+    margin-bottom: 0;
+    margin-right: 364px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 78px;
+      left: 358px;
+      height: 10px;
+      width: calc(100% - 355px);
+      background-color: var(--white);
+      z-index: -1;
+    }
+  
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 78px;
+      right: -86px;
+      width: 76px;
+      height: 152.5px;
+      border-radius: 0 76px 76px 0;
+      border: 10px solid var(--white);
+      border-left: 0;
+      z-index: -1;
+    }
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 78px;
-    right: -86px;
-    width: 76px;
-    height: 152.5px;
-    border-radius: 0 76px 76px 0;
-    border: 10px solid var(--white);
-    border-left: 0;
-    z-index: -1;
-  }
 
   &:first-child {
     &:before {
@@ -61,7 +57,10 @@
   &:nth-child(even) {
     align-items: flex-end;
     margin-right: 0;
-    margin-left: 364px;
+    
+    @media (min-width: 1024px) {
+      margin-left: 364px;
+    }
 
     &:before {
       left: auto;
@@ -79,32 +78,39 @@
 
     .bk-timeline {
       &__header {
-        justify-content: flex-start;
-        flex-direction: row-reverse;
+        @media (min-width: 1024px) {
+          justify-content: flex-start;
+          flex-direction: row-reverse;
+        }
       }
 
       &__title {
-        padding-right: 0;
-        padding-left: 24px;
-        text-align: left;
+        
+        @media (min-width: 1024px) {
+          padding-right: 0;
+          padding-left: 24px;
+          text-align: left;
+        }
       }
       
       &__content {
-        margin-left: 0;
-        margin-right: 364px;
-
-        &:after {
-          content: '';
-          position: absolute;
-          display: block;
-          top: 78px;
-          left: -91px;
-          width: 76px;
-          height: calc(100% - 10px);
-          border-radius: 76px 0 0 76px;
-          border: 10px solid var(--white);
-          border-right: 0;
-          z-index: -1;
+        @media (min-width: 1024px) {
+          margin-left: 0;
+          margin-right: 364px;
+  
+          &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 78px;
+            left: -91px;
+            width: 76px;
+            height: calc(100% - 10px);
+            border-radius: 76px 0 0 76px;
+            border: 10px solid var(--white);
+            border-right: 0;
+            z-index: -1;
+          }
         }
       }
     }
@@ -203,47 +209,69 @@
     align-items: center;
     justify-content: flex-start;
     align-items: center;
-    max-width: 364px;
     width: 100%;
+    
+    @media (min-width: 1024px) {
+      max-width: 364px;
+    }
   }
 
   &__title {
     padding-right: 10px;
     text-align: right;
     font-family: var(--second-font-family);
-    font-size: 34px;
     font-weight: 700;
     line-height: 1.25em;
     color: var(--turquoise);
+    
+    @media (min-width: 1024px) {
+      font-size: 34px;
+    }
 
     span {
       display: block;
-      font-size: 80px;
+      font-size: 20px;
       line-height: 1.5em;
+      
+      @media (min-width: 1024px) {
+        font-size: 80px;
+      }
     }
   }
 
   &__icon {
     position: relative;
     background-color: var(--turquoise);
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    width: 92px;
-    height: 92px;
     border: none;
     cursor: pointer;
+    
+    @media (min-width: 1024px) {
+      width: 92px;
+      height: 92px;
+    }
     
     &:after {
       content: '';
       position: absolute;
-      top: -24px;
-      left: -24px;
-      right: -24px;
-      bottom: -24px;
+      top: -12px;
+      left: -12px;
+      right: -12px;
+      bottom: -12px;
       border-radius: 50%;
       background-color: var(--turquoise);
       opacity: 0;
       transition: ease .3s;
       z-index: -1;
+
+      @media (min-width: 1024px) {
+        top: -24px;
+        left: -24px;
+        right: -24px;
+        bottom: -24px;
+      }
     }
     
     img {
@@ -258,21 +286,27 @@
 
   &__content {
     display: none;
-    margin-left: 364px;
+    margin-top: 40px;
+    
+    @media (min-width: 1024px) {
+      margin-left: 364px;
+      margin-top: 0;
 
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 78px;
-      right: -86px;
-      width: 76px;
-      height: calc(100% - 10px);
-      border-radius: 0 76px 76px 0;
-      border: 10px solid var(--white);
-      border-left: 0;
-      z-index: -1;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 78px;
+        right: -86px;
+        width: 76px;
+        height: calc(100% - 10px);
+        border-radius: 0 76px 76px 0;
+        border: 10px solid var(--white);
+        border-left: 0;
+        z-index: -1;
+      }
     }
+
 
     h3 {
       color: var(--turquoise);

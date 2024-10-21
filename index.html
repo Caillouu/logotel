@@ -17,7 +17,7 @@
       <nav role="navigation" class="headroom__nav">
         <ul>
           <li>
-            <a href="#about">Slider</a>
+            <a href="#about" class="active">Slider</a>
           </li>
           <li>
             <a href="#news">News</a>
@@ -79,12 +79,18 @@
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-pagination"></div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
         </div>
       </section>
       <section id="news" class="section-news">
         <div class="container">
           <div class="grid grid--center">
-            <div class="1/3 1/2--thumb grid__cell">
+            <div class="1/1 1/3--desk grid__cell">
               <a href="#" class="bk-news">
                 <img src="./src/assets/img/news-1.png" alt="Book 1" />
                 <div class="bk-news__content">
@@ -94,7 +100,7 @@
                 </div>
               </a>
             </div>
-            <div class="1/3 1/2--thumb grid__cell">
+            <div class="1/1 1/3--desk grid__cell">
               <a href="#" class="bk-news">
                 <img src="./src/assets/img/news-2.png" alt="Book 1" />
                 <div class="bk-news__content">
@@ -104,7 +110,7 @@
                 </div>
               </a>
             </div>
-            <div class="1/3 1/2--thumb grid__cell">
+            <div class="1/1 1/3--desk grid__cell">
               <a href="#" class="bk-news">
                 <img src="./src/assets/img/news-3.png" alt="Book 1" />
                 <div class="bk-news__content">
@@ -118,96 +124,107 @@
         </div>
       </section>
       <section id="percorso" class="section-timeline">
-        <div class="container">
-          <h2 class="color-pink">Sed diam nonummy nibh euismod tincidunt ?</h2>
-          <div class="wrapper-bk-timeline">
-            <div class="bk-timeline">
-              <div class="bk-timeline__header">
-                <div class="bk-timeline__title"><span>1.</span>Lorem Ipsum</div>
-                <button class="bk-timeline__icon">
-                  <img src="./src/assets/img/icon-1.svg" alt="icon">
-                </button>
+        <div class="bk-title-bg bk-title-bg--tar">
+          <img src="./src/assets/img/onda-bianco-grigio.png" alt="Background">
+          <div class="container">
+            <h2 class="color-pink">Sed diam nonummy nibh euismod tincidunt ?</h2>
+          </div>
+        </div>
+        <div class="section-timeline__bg">
+          <div class="container">
+            <div class="wrapper-bk-timeline">
+              <div class="bk-timeline">
+                <div class="bk-timeline__header">
+                  <div class="bk-timeline__title"><span>1.</span>Lorem Ipsum</div>
+                  <button class="bk-timeline__icon">
+                    <img src="./src/assets/img/icon-1.svg" alt="icon">
+                  </button>
+                </div>
+                <div class="bk-timeline__content">
+                  <h3>Lorem Ipsum</h3>
+                  <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+                </div>
               </div>
-              <div class="bk-timeline__content">
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+              <div class="bk-timeline">
+                <div class="bk-timeline__header">
+                  <div class="bk-timeline__title"><span>2.</span>Lorem Ipsum</div>
+                  <button class="bk-timeline__icon">
+                    <img src="./src/assets/img/icon-2.svg" alt="icon">
+                  </button>
+                </div>
+                <div class="bk-timeline__content">
+                  <h3>Lorem Ipsum</h3>
+                  <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+                </div>
               </div>
-            </div>
-            <div class="bk-timeline">
-              <div class="bk-timeline__header">
-                <div class="bk-timeline__title"><span>2.</span>Lorem Ipsum</div>
-                <button class="bk-timeline__icon">
-                  <img src="./src/assets/img/icon-2.svg" alt="icon">
-                </button>
+              <div class="bk-timeline">
+                <div class="bk-timeline__header">
+                  <div class="bk-timeline__title"><span>3.</span>Lorem Ipsum</div>
+                  <button class="bk-timeline__icon">
+                    <img src="./src/assets/img/icon-3.svg" alt="icon">
+                  </button>
+                </div>
+                <div class="bk-timeline__content">
+                  <h3>Lorem Ipsum</h3>
+                  <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+                </div>
               </div>
-              <div class="bk-timeline__content">
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+              <div class="bk-timeline">
+                <div class="bk-timeline__header">
+                  <div class="bk-timeline__title"><span>4.</span>Lorem Ipsum</div>
+                  <button class="bk-timeline__icon">
+                    <img src="./src/assets/img/icon-4.svg" alt="icon">
+                  </button>
+                </div>
+                <div class="bk-timeline__content">
+                  <h3>Lorem Ipsum</h3>
+                  <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+                </div>
               </div>
-            </div>
-            <div class="bk-timeline">
-              <div class="bk-timeline__header">
-                <div class="bk-timeline__title"><span>3.</span>Lorem Ipsum</div>
-                <button class="bk-timeline__icon">
-                  <img src="./src/assets/img/icon-3.svg" alt="icon">
-                </button>
+              <div class="bk-timeline">
+                <div class="bk-timeline__header">
+                  <div class="bk-timeline__title"><span>5.</span>Lorem Ipsum</div>
+                  <button class="bk-timeline__icon">
+                    <img src="./src/assets/img/icon-5.svg" alt="icon">
+                  </button>
+                </div>
+                <div class="bk-timeline__content">
+                  <h3>Lorem Ipsum</h3>
+                  <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+                </div>
               </div>
-              <div class="bk-timeline__content">
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
-              </div>
-            </div>
-            <div class="bk-timeline">
-              <div class="bk-timeline__header">
-                <div class="bk-timeline__title"><span>4.</span>Lorem Ipsum</div>
-                <button class="bk-timeline__icon">
-                  <img src="./src/assets/img/icon-4.svg" alt="icon">
-                </button>
-              </div>
-              <div class="bk-timeline__content">
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
-              </div>
-            </div>
-            <div class="bk-timeline">
-              <div class="bk-timeline__header">
-                <div class="bk-timeline__title"><span>5.</span>Lorem Ipsum</div>
-                <button class="bk-timeline__icon">
-                  <img src="./src/assets/img/icon-5.svg" alt="icon">
-                </button>
-              </div>
-              <div class="bk-timeline__content">
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
-              </div>
-            </div>
-            <div class="bk-timeline">
-              <div class="bk-timeline__header">
-                <div class="bk-timeline__title"><span>6.</span>Lorem Ipsum</div>
-                <button class="bk-timeline__icon">
-                  <img src="./src/assets/img/icon-6.svg" alt="icon">
-                </button>
-              </div>
-              <div class="bk-timeline__content">
-                <h3>Lorem Ipsum</h3>
-                <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+              <div class="bk-timeline">
+                <div class="bk-timeline__header">
+                  <div class="bk-timeline__title"><span>6.</span>Lorem Ipsum</div>
+                  <button class="bk-timeline__icon">
+                    <img src="./src/assets/img/icon-6.svg" alt="icon">
+                  </button>
+                </div>
+                <div class="bk-timeline__content">
+                  <h3>Lorem Ipsum</h3>
+                  <p>Lorem quam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci  magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud ex erci tati on ullamcorper.</p>
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section id="tab" class="section-cards">
+        <div class="bk-title-bg">
+          <img src="./src/assets/img/onda-grigio-bianco.png" alt="Background">
+          <div class="container">
+            <h2 class="color-pink">Lorem ipsum dolor sit amet consectetuer?</h2>
+          </div>
+        </div>
         <div class="container">
-          <h2 class="color-pink">Lorem ipsum dolor
-            sit amet consectetuer?</h2>
             <div class="grid grid--center">
-              <div class="1/3 1/2--thumb grid__cell">
+              <div class="1/1 1/3--desk grid__cell">
                 <div class="bk-card" data-color="#F07C79">
                   <div class="bk-card__bg"></div>
                   <div class="bk-card__title">Tab Rosa</div>
@@ -218,7 +235,7 @@
                   <a href="#" class="btn btn--primary">Call to action</a>
                 </div>
               </div>
-              <div class="1/3 1/2--thumb grid__cell">
+              <div class="1/1 1/3--desk grid__cell">
                 <div class="bk-card" data-color="#E2CA40">
                   <div class="bk-card__bg"></div>
                   <div class="bk-card__title">Tab gialla</div>
@@ -229,7 +246,7 @@
                   <a href="#" class="btn btn--primary">Call to action</a>
                 </div>
               </div>
-              <div class="1/3 1/2--thumb grid__cell">
+              <div class="1/1 1/3--desk grid__cell">
                 <div class="bk-card" data-color="#28AFB0">
                   <div class="bk-card__bg"></div>
                   <div class="bk-card__title">Tab turchese</div>
