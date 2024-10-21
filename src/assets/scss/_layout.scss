@@ -29,13 +29,22 @@ button {
 
 .bk-title-bg {
   position: relative;
-  margin-top: -150px;
+  margin-top: -3px;
+
+  @media (min-width: 1024px) {
+    margin-top: -150px;
+  }
   
   &.bk-title-bg--tar {
     .container {
       display: flex;
       justify-content: flex-end;
-      top: 260px;
+      background-color: var(--grey);
+      
+      @media (min-width: 1024px) {
+        top: 260px;
+        background-color: transparent;
+      }
 
       h2 {
         text-align: right;
@@ -48,10 +57,14 @@ button {
   }
   
   .container {
-    position: absolute;
-    top: 400px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin-top: -3px;
+  
+    @media (min-width: 1024px) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: 400px;
+    }
 
     h2 {
       max-width: 800px;

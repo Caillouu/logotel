@@ -2,11 +2,16 @@
   position: fixed;
   width: 100%;
   padding: 15px 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  text-align: center;
   transition: ease .3s;
   z-index: 99;
+  
+  @media (min-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
   
   @media (min-width: 1024px) {
     padding: 30px 60px;
@@ -58,7 +63,11 @@
     ul {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
+      
+      @media (min-width: 640px) {
+        justify-content: flex-start;
+      }
 
       li {
         padding: 0 10px;

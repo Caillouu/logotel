@@ -8,6 +8,10 @@
 - Use Sass autocompilation
 - You can create new file in `src/scss` folder, and add import in main.js
 
+## JS
+
+- You can create new file in `src/js` folder, and add import in main.js
+
 ## Usage
 
 - Clone the repository with Github
@@ -23,12 +27,10 @@ npm i
 npm run dev
 ```
 
-- Go to : [text](http://localhost:5173/logotel/)
+- Go to : [localhost](http://localhost:5173/logotel/)
 
-## VSCode Extensions
+- If you want to build the project:
 
-Install the following extension on VSCode for integrations with Prettier, ESLint and HTMLHint:
-
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [HTMLHint](https://marketplace.visualstudio.com/items?itemName=mkaufman.HTMLHint)
+```
+npm run build
+```
